@@ -1,0 +1,54 @@
+using System;
+
+namespace CourseCSharp
+{
+    class Program
+    {public static void HelloUser()
+        {
+            Console.WriteLine("Please enter your first name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello, {name}!");
+        }
+        public static void VariableExchange()
+        {
+            int z = 0;
+            Console.Write("Please enter variables values: \nx = ");
+            int x = int.Parse(Console.ReadLine());
+            Console.Write("y = ");
+            int y = int.Parse(Console.ReadLine());
+            z = x;
+            x = y;
+            y = z;
+            Console.WriteLine($"Variables after converting: x = {x}; y = {y}.");
+        }
+        public static void NumbersArray()
+        {
+            Console.Write("Please enter variable value: \nx = ");
+            int x = int.Parse(Console.ReadLine());
+            string str = x.ToString();
+            int x1 = str.Length;
+            Console.WriteLine($"Length of number is {x1}");
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Choose option: \n1.greetings. \n2.enter two int numbers. \n3.enter one int number.");
+            int n = int.Parse(Console.ReadLine());
+            
+                switch (n)
+                {
+                    case 1:
+                        HelloUser();
+                        break;
+                    case 2:
+                        VariableExchange();
+                        break;
+                    case 3:
+                        NumbersArray();
+                        break;
+                    default:
+                        Console.WriteLine("Wrong number!");
+                        break;
+                }
+        }
+    }
+}

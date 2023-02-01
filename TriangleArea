@@ -1,0 +1,23 @@
+using System;
+
+namespace TriangleSquare
+{
+    class Program
+    {public static double HerosFormula(double a, double b, double c)
+        {
+            double p = (a + b + c)/2;
+            double result = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            return result;
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("Please enter the sides of triangle: \na = ");
+            double a = double.Parse(Console.ReadLine());
+            Console.Write("b = ");
+            double b = double.Parse(Console.ReadLine());
+            Console.Write("c = ");
+            double c = double.Parse(Console.ReadLine());
+            Console.WriteLine($"Triangle's area is {HerosFormula(a,b,c)} square centimeters.");
+        }
+    }
+}

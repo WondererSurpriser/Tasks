@@ -1,0 +1,29 @@
+using System;
+
+namespace YourProfile
+{
+    class Program
+    {public static double BodyMassIndex(int weight, int height)
+        {
+            double mheight = (double)height / 100;
+            double bmi = weight / Math.Abs(mheight);
+            return bmi;
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("Hello, please enter your first name: ");
+            string name = Console.ReadLine();
+            Console.Write("Also enter your last name: ");
+            string lastname = Console.ReadLine();
+            Console.Write("And your age: ");
+            int age = int.Parse(Console.ReadLine());
+            Console.Write("What about your weight(kilograms): ");
+            int weight = int.Parse(Console.ReadLine());
+            Console.Write("And of course, height(centimeters): ");
+            int height = int.Parse(Console.ReadLine());
+            Console.WriteLine($"Your profile:\nFull name: {name}, {lastname}\nAge: {age}\nWeight: {weight} centimeters\nHeight: {height} kilograms\nBody Mass Index: {BodyMassIndex(weight,height)}.");
+            //it was condition of the task to write all data in one string
+        
+        }
+    }
+}
